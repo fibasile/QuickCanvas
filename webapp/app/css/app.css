@@ -1,0 +1,95 @@
+/* app css stylesheet */
+
+body {
+       font-family: "Helvetica Neue", Helvetica;
+}
+
+
+.first-row {
+	min-height: 320px;
+}
+
+.second-row {
+	min-height: 260px;
+}
+
+.box h3 {
+	display: block;
+	position: relative;
+	text-align: center;
+	font-size: .8em;
+	margin: 0;
+	background-color: #aa0000;
+	color: #fff;
+	text-transform: uppercase;
+}
+.box h3 .iconic-info {
+	position: absolute;
+	bottom: 0px;
+	right: 2px;
+	font-size: 1.5em;
+}
+
+
+.box input {
+	font-size: .9em;
+	position: absolute;
+	bottom: 0px;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	right: 10px;
+	border:none;
+	border-top: 1px solid #dedede;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	box-shadow: none;
+}
+
+.box {
+	position: relative;
+	background-color: #eee;
+	border: 1px solid #dedede;
+	min-height: 300px;
+	max-height: 300px;
+}
+
+.box ul {
+	list-style-type: none;
+	margin: 2px;
+	padding-bottom:20px;
+}
+.box ul > li {
+	font-size: .8em;
+	border: 1px solid #dedede;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-top: 5px;
+	min-height: 25px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	position:relative;
+	background-color: white;
+}
+.box ul > li > a {
+	margin-left: 5px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	color:#dedede;
+	right: 3px;
+}
+
+
+.second-row .box {
+	min-height: 260px;
+	max-height: 260px;	
+}
+
+.halfbox {
+	border: 1px solid #dedede;
+	min-height: 145px;
+	margin-bottom: 5px;
+}

@@ -1,0 +1,23 @@
+<!-- Navbar start -->
+<div class="navbar" ng-controller="NavCtrl">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">QuickCanvas.io</a>
+        <ul class="nav">
+			
+          <li class="active" ng-show="currentPath == '/'"><a href="#/home">Home</a></li>
+          <li  ng-hide="currentPath == '/'"><a href="#/home">Home</a></li>
+          <li ng-hide="currentPath == '/canvas'"><a href="#/canvas">Build your Lean Canvas</a></li>
+          <li class="active" ng-show="currentPath == '/canvas'"><a href="#/canvas">Build your Lean Canvas</a></li>
+          <li><a ng-click="showExport()" ng-show="currentPath == '/canvas'">Export PDF...</a></li>
+          <li class="active" ng-show="currentPath == '/about'"><a href="#/about">About</a></li>
+          <li ng-hide="currentPath == '/about'"><a href="#/about">About</a></li>
+		  <li><a ng-click="showHelp()">Help</a></li>
+		  
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Navbar end -->

@@ -10,8 +10,10 @@
           <li ng-hide="currentPath == '/canvas'"><a href="#/canvas">Build your Lean Canvas</a></li>
           <li class="active" ng-show="currentPath == '/canvas'"><a href="#/canvas">Build your Lean Canvas</a></li>
           <li><a ng-click="showExport()" ng-show="currentPath == '/canvas'">Export PDF...</a></li>
-          <li class="active" ng-show="currentPath == '/about'"><a href="#/about">About</a></li>
-          <li ng-hide="currentPath == '/about'"><a href="#/about">About</a></li>
+          <li><a ng-click="clearData()" ng-show="currentPath == '/canvas'">Clear data...</a></li>
+        
+		  <li class="active" ng-show="currentPath == '/about'"><a href="#/about">About</a></li>
+          <li ng-hide="currentPath == '/about' || currentPath == '/canvas'"><a href="#/about">About</a></li>
 		  <li><a ng-click="showHelp()">Help</a></li>
 		  
         </ul>

@@ -57,7 +57,7 @@ body {
 .box ul {
 	list-style-type: none;
 	margin: 2px;
-	padding-bottom:20px;
+	padding-bottom:30px;
 }
 .box ul > li {
 	font-size: .8em;
@@ -66,7 +66,7 @@ body {
 	padding-bottom: 2px;
 	padding-right: 5px;
 	padding-left: 5px;
-	margin-top: 5px;
+	margin-top: 1px;
 	min-height: 25px;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;

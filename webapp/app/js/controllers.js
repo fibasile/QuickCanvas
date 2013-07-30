@@ -6,7 +6,7 @@ function ItemController(key) {
 	return	function($scope, canvasService) {
 	  	 $scope.showInput = false;
 	 
-		 $('.icon').tooltip({placement: 'right'});
+		 $('.icon').tooltip({placement: 'bottom'});
 	 
 		 $scope.getItems = function(){
 			 return canvasService.getItems(key);
@@ -28,10 +28,16 @@ function ItemController(key) {
 
 angular.module('quickcanvas.controllers', []).
 	controller('NavCtrl', ['$scope', '$route', '$location', 'canvasService','pdfService', function($scope,$route,$location, canvasService, pdfService){
+		 
+		 $scope.showTooltips = false; 
+		  
 		  $scope.$on('$routeChangeSuccess', function() {
 			  $scope.currentPath = $location.path();
 			//If this doesn't work, console.log $route.current to see how it's formatted
+			$scope.showTooltips = false;
 		  });
+		  
+		  
 		  
 		  $scope.clearData = function(){
 			  if (confirm("Do you really want to reset the canvas? Any data inside it will be lost forever.")){
@@ -60,7 +66,16 @@ angular.module('quickcanvas.controllers', []).
 		};
 		
 		$scope.showHelp = function(){
-			alert('Show help');
+			//alert('Show help');
+			$scope.showTooltips = !$scope.showTooltips;
+			if ($scope.showTooltips){
+				$('.icon').tooltip({placement: 'bottom',trigger: 'manual'}).tooltip('show');
+				
+			} else {
+				$('.icon').tooltip('hide').tooltip();		
+						
+			}
+			
 		};
 	
 	}])

@@ -14,7 +14,8 @@
         
 		  <li class="active" ng-show="currentPath == '/about'"><a href="#/about">About</a></li>
           <li ng-hide="currentPath == '/about' || currentPath == '/canvas'"><a href="#/about">About</a></li>
-		  <li><a ng-click="showHelp()">Help</a></li>
+		  <li><a ng-show="!showTooltips" ng-click="showHelp()">Help</a></li>
+		  <li><a ng-show="showTooltips" ng-click="showHelp()">Hide Help</a></li>
 		  
         </ul>
     </div>

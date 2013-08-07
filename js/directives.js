@@ -9,6 +9,15 @@ angular.module('quickcanvas.directives', []).
       elm.text(version);
     };
   }])
+  .directive('myAdSense', function() {
+      return {
+        restrict: 'A',
+        transclude: true,
+        replace: true,
+        template: '<div ng-transclude></div>',
+        link: function ($scope, element, attrs) {}
+      }
+    })
   .directive('ngEnter', function() {
           return function(scope, element, attrs) {
               element.bind("keydown keypress", function(event) {
